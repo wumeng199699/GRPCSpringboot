@@ -1,0 +1,24 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.grpc.server.grpcserver;
+
+message Matrix{
+    message Row{
+        repeated int32 a = 1;
+    }
+    repeated Row row = 1;
+}
+
+message BlockRequest{
+    Matrix a = 1;
+    Matrix b = 2;
+}
+
+message BlockResponse{
+    Matrix c = 1;
+}
+
+service BlockService{
+    rpc mult(BlockRequest) returns (BlockResponse);
+    rpc add(BlockRequest) returns (BlockResponse);
+}
