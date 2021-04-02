@@ -44,7 +44,7 @@ public class StubManagement<stubs> {
         }
         List<GrpcAddress> addressList = new ArrayList<>();
         for (int i = 0; i < numberServer; i++){
-            addressList.add(new GrpcAddress("hostIP", initPort++));
+            addressList.add(new GrpcAddress(hostIP, initPort++));
         }
         return addressList;
     }
