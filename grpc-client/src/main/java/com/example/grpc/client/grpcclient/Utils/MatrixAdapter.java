@@ -17,6 +17,9 @@ public class MatrixAdapter {
 
     public Matrix toMatrix(int[][] a){
         Matrix.Builder res = Matrix.newBuilder();
+        if (a == null){
+            return null;
+        }
         int rows = a.length;
         int cols = a[0].length;
         for (int i = 0; i < rows; i++){
