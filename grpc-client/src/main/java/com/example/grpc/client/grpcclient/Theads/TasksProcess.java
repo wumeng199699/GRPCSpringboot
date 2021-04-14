@@ -140,7 +140,7 @@ public class TasksProcess {
         String location = key;
         int numberServer = stubInitList.size();    // the number of server
 
-        while(list.size() >= 2){
+        if (list.size() >= 2){
             // get every two first matrixes to do adding tasks and remove them from the addTaskMap
             int[][] A =  list.remove(0);
             int[][] B =  list.remove(0);
